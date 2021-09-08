@@ -10,4 +10,4 @@ First Clean the Project then execute
     mvn liquibase:updateSQL
 
 To delete all Tables
-mvn liquibase:dropAll
+    mvn liquibase:dropAll
