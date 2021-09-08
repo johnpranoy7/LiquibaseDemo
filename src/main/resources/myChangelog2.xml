@@ -1,0 +1,24 @@
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd 
+   http://www.liquibase.org/xml/ns/dbchangelog 
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+	<preConditions onFail="HALT" onError="HALT"
+		onErrorMessage="Validation Failed">
+		<dbms type="oracle" />
+		<runningAs username="root" />
+		<columnExists tableName="employee" schemaName="root" columnName="name" />
+	</preConditions>
+
+	<changeSet author="John" id="2">
+		<!-- <validCheckSum>7:6b8d48359714ef00ab797be3a92dbd3e</validCheckSum> -->
+		<addColumn tableName="${myTable}">
+			<column name="address" type="varchar(255)" />
+		</addColumn>
+	</changeSet>
+
+</databaseChangeLog>
