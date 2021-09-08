@@ -15,5 +15,5 @@ To delete all Tables
     mvn liquibase:dropAll
     
 ## References
-https://www.youtube.com/watch?v=WPAKj0ygul0&list=PL8LikImwls6IM8Ks9CvpnU4UbcBCJUd3C&index=1&ab_channel=SivaReddy
-[Setting Ojdbc in local mvn repo] https://mkyong.com/maven/how-to-add-oracle-jdbc-driver-in-your-maven-local-repository/
+- [Tutorial](https://www.youtube.com/watch?v=WPAKj0ygul0&list=PL8LikImwls6IM8Ks9CvpnU4UbcBCJUd3C&index=1&ab_channel=SivaReddy)
+- [Setting Ojdbc Jar in local mvn repo](https://mkyong.com/maven/how-to-add-oracle-jdbc-driver-in-your-maven-local-repository/)
