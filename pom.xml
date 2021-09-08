@@ -35,6 +35,7 @@
 				<version>3.4.1</version>
 				<configuration>
 					<propertyFile>src/main/resources/liquibase.properties</propertyFile>
+					<outputChangeLogFile>src/main/resources/generatedSql.xml</outputChangeLogFile>
 				</configuration>
 			</plugin>
 

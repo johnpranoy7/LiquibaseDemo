@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>    <changeSet author="John Pranoy Yalla (generated)" id="1631089421714-1">
+        <createTable tableName="STUDENT">
+            <column name="SID" type="NUMBER(*, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SNAME" type="VARCHAR2(20)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="John Pranoy Yalla (generated)" id="1631089421714-2">
+        <createIndex indexName="SYS_C007460" tableName="STUDENT" unique="true">
+            <column name="SID"/>
+        </createIndex>
+        <addPrimaryKey columnNames="SID" constraintName="SYS_C007460" forIndexName="SYS_C007460" tableName="STUDENT"/>
+    </changeSet>
+</databaseChangeLog>
