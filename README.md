@@ -20,12 +20,14 @@ First Clean the Project then execute
     
     mvn liquibase:generateChangeLog
     
+## Useful DB Queries
+
+    //If execution fails in between need to run this query to remove Lock
+    UPDATE DATABASECHANGELOGLOCK SET LOCKED=0, LOCKGRANTED=null, LOCKEDBY=null where ID=1;
+    
+    //For Validation Error on Modified ChangeSet
+    update databasechangelog set md5sum=null where id=1; 
+    
 ## References
 - [Tutorial](https://www.youtube.com/watch?v=WPAKj0ygul0&list=PL8LikImwls6IM8Ks9CvpnU4UbcBCJUd3C&index=1&ab_channel=SivaReddy)
 - [Setting Ojdbc Jar in local mvn repo](https://mkyong.com/maven/how-to-add-oracle-jdbc-driver-in-your-maven-local-repository/)
-
-## Useful DB Queries
-
-    UPDATE DATABASECHANGELOGLOCK SET LOCKED=0, LOCKGRANTED=null, LOCKEDBY=null where ID=1; //If execution fails in between need to run this query to remove Lock
-    
-    update databasechangelog set md5sum=null where id=1; //Validation Error on Modified ChangeSet
